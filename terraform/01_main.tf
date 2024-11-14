@@ -24,5 +24,5 @@ provider "aws" {
 }
 # Configure the SnowFlake Provider
 provider "snowflake" {
-  role = "SYSADMIN"
+  role = "ACCOUNTADMIN"
 }

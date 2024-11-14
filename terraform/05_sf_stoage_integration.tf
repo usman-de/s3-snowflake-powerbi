@@ -5,7 +5,7 @@ resource "snowflake_storage_integration" "s3_integration" {
 
   enabled = true
 
-    storage_allowed_locations = ["('s3://s3-snowflake-pipeline/loading/')"]
+    storage_allowed_locations = ["s3://s3-snowflake-pipeline/loading/"]
 
   storage_provider         = "S3"
   storage_aws_role_arn = local.storage_aws_role_arn
