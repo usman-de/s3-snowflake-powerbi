@@ -1,6 +1,10 @@
 name: 02 Terraform Apply
 
 on:
+  workflow_run: # This allows you to run the workflow automatically when another workflow is completed
+    workflows: ["01 Terraform Validate & Plan"]
+    types:
+      - completed
   workflow_dispatch:  # This allows you to run the workflow manually with a button click
 
 env:
