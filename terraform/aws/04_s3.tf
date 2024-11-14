@@ -1,8 +1,8 @@
+# Type: S3 Bucket
 resource "aws_s3_bucket" "snowflake" {
-  bucket = local.test_s3_bucket
-
+  bucket = local.s3_bucket
   tags = {
-    Name        = local.test_s3_bucket
+    Name        = local.s3_bucket
     Environment = "test"
   }
 }

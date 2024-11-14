@@ -1,11 +1,11 @@
-name: 01 Terraform Validate & Plan
+name: AWS Terraform Validate & Plan
 
 on:
   push:
     branches: # This allows you to run the workflow automatically as soon as you push to the main branch
       - main
     paths:
-      - 'terraform/**'
+      - 'terraform/aws/**'
   workflow_dispatch:  # This allows you to run the workflow manually with a button click
 
 env:
@@ -29,7 +29,7 @@ jobs:
       run: terraform init
 
     - name: Terraform Validate
-      working-directory: ./terraform  
+      working-directory: ./terraform/aws
       run: terraform validate
 
   terraform_plan:
@@ -50,7 +50,7 @@ jobs:
       run: terraform init
 
     - name: Terraform Plan
-      working-directory: ./terraform
+      working-directory: ./terraform/aws
       id: terraform_plan_output
       run: terraform plan -detailed-exitcode
       continue-on-error: true

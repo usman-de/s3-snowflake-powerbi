@@ -4,6 +4,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
+    snowflake = {
+      source  = "Snowflake-Labs/snowflake"
+      version = "~> 0.87"
+    }
   }
 
   backend "s3" {
@@ -17,4 +21,8 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
   region = "eu-west-2"
+}
+# Configure the SnowFlake Provider
+provider "snowflake" {
+  role = "SYSADMIN"
 }

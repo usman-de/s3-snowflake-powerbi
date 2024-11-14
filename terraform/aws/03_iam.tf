@@ -1,3 +1,4 @@
+# This file creates an IAM policy that allows read access to an S3 bucket for Snowflake.
 resource "aws_iam_policy" "s3-snowflake" {
   name        = local.iam_policy
   path        = "/"
