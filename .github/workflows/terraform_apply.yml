@@ -1,6 +1,9 @@
 name: 02 Terraform Apply
 
 on:
+  push:
+    branches: # This allows you to run the workflow automatically as soon as you push to the main branch
+      - main
   workflow_dispatch:  # This allows you to run the workflow manually with a button click
 
 env:
