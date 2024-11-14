@@ -4,6 +4,8 @@ on:
   push:
     branches: # This allows you to run the workflow automatically as soon as you push to the main branch
       - main
+    paths:
+      - 'terraform/**'
   workflow_dispatch:  # This allows you to run the workflow manually with a button click
 
 env:
