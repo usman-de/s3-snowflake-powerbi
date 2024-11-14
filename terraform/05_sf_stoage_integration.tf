@@ -9,5 +9,4 @@ resource "snowflake_storage_integration" "s3_integration" {
 
   storage_provider         = "S3"
   storage_aws_role_arn = local.storage_aws_role_arn
-  storage_aws_external_id  = "s3-snowflake-openalex-authors-access"
 }
