@@ -1,4 +1,4 @@
-name: 02 Terraform Apply
+name: SnowFlake Terraform Apply
 
 on:
   workflow_run: # This allows you to run the workflow automatically when another workflow is completed
@@ -28,5 +28,5 @@ jobs:
       run: terraform init
 
     - name: Terraform Apply
-      working-directory: ./terraform
+      working-directory: ./terraform/snowflake
       run: terraform apply -auto-approve
