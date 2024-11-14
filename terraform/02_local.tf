@@ -1,3 +1,3 @@
 locals {
-  test_s3_bucket = "snowflake"
+  test_s3_bucket = "s3-snowflake-pipeline"
 }
