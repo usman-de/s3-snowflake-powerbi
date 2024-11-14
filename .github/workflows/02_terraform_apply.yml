@@ -25,7 +25,7 @@ jobs:
         echo "AWS_DEFAULT_REGION=${{ env.AWS_REGION }}" >> $GITHUB_ENV
         echo "SNOWFLAKE_USER=${{ secrets.SNOWFLAKE_USER }}" >> $GITHUB_ENV
         echo "SNOWFLAKE_AUTHENTICATOR=${{ secrets.SNOWFLAKE_AUTHENTICATOR }}" >> $GITHUB_ENV
-        echo "SNOWFLAKE_PRIVATE_KEY=${{ secrets.SNOWFLAKE_PRIVATE_KEY }}" >> $GITHUB_ENV
+        printf "SNOWFLAKE_PRIVATE_KEY=${{ secrets.SNOWFLAKE_PRIVATE_KEY }}" >> $GITHUB_ENV
         echo "SNOWFLAKE_ACCOUNT=${{ secrets.SNOWFLAKE_ACCOUNT }}" >> $GITHUB_ENV
         echo "SNOWFLAKE_REGION=${{ env.SNOWFLAKE_REGION }}" >> $GITHUB_ENV
 
