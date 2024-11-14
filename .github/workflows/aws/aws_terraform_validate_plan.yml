@@ -29,7 +29,7 @@ jobs:
       run: terraform init
 
     - name: Terraform Validate
-      working-directory: ./terraform  
+      working-directory: ./terraform/aws
       run: terraform validate
 
   terraform_plan:
@@ -50,7 +50,7 @@ jobs:
       run: terraform init
 
     - name: Terraform Plan
-      working-directory: ./terraform/snowflake
+      working-directory: ./terraform/aws
       id: terraform_plan_output
       run: terraform plan -detailed-exitcode
       continue-on-error: true
