@@ -14,6 +14,18 @@ This repository sets up an end-to-end automated pipeline for loading data from S
      - Runs `terraform validate and plan` on every push to the `main` or `master` branch if there's a change in terraform folder.
      - Runs `terraform apply` on completion of `terraform validate and plan` action.
 
+### 3. **Loading Data into S3**
+
+To load data into your S3 bucket, we use the following command to sync data from the OpenAlex authors dataset to your own S3 bucket:
+
+```bash
+aws s3 sync s3://openalex/data/authors s3://bucket-name/key --exclude 'manifest'
+```
+
+**About OpenAlex**: OpenAlex is a comprehensive open-source dataset of academic works, authors, institutions, and other scholarly metadata. It contains detailed information on millions of authors, papers, and citations.
+
+**Note on Raw Data**: The raw data from OpenAlex can be quite messy and complex to work with due to its large scale and diverse formats.
+
 ## How to Use
 
 1. **Modify Terraform Configuration**:
